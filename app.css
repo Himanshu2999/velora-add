@@ -1,0 +1,882 @@
+/* ==========================================================================
+   1. Basic / Reset
+   ========================================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  color: #2b2420;
+  line-height: 1.6;
+  background-color: #fdfaf6;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2 {
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.eyebrow {
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #a9895e;
+  margin-bottom: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.eyebrow.center {
+  text-align: center;
+}
+
+.section-text {
+  color: #6b6259;
+  max-width: 480px;
+  font-size: 16px;
+}
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ==========================================================================
+   2. Header / Navbar
+   ========================================================================== */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: transparent;
+  padding: 18px 0;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: #fdfaf6;
+  font-size: 22px;
+  letter-spacing: 4px;
+}
+
+.nav {
+  display: flex;
+  gap: 32px;
+}
+
+.nav a {
+  color: #e6ddd2;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: color 0.2s ease;
+}
+
+.nav a:hover {
+  color: #ffffff;
+  
+}
+
+.header-cta {
+  padding: 10px 22px;
+  font-size: 14px;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  width: 24px;
+  height: 2px;
+  background-color: #fdfaf6;
+}
+
+/* ==========================================================================
+   3. Hero Section
+   ========================================================================== */
+
+.maink {
+  background-image: url("imgs/backg.png");
+  background-size: cover;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 70px 40px;
+  color: #fdfaf6;
+  border-radius: 0 0 24px 24px;
+  animation: fadeIn 0.8s ease both;
+}
+
+.hero-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 18px;
+}
+
+.hero-text {
+  max-width: 460px;
+  color: #cfc4b6;
+  margin-bottom: 28px;
+}
+
+.hero-features {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  margin-bottom: 34px;
+  flex-wrap: wrap;
+}
+
+.hero-features li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  text-align: center;
+  max-width: 90px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #e6ddd2;
+}
+
+.hero-features .icon {
+  font-size: 20px;
+  color: #d8a35a;
+}
+
+.hero-trust {
+  display: flex;
+  gap: 24px;
+  margin-top: 24px;
+  font-size: 13px;
+  color: #a89a89;
+  font-family: Arial, Helvetica, sans-serif;
+  flex-wrap: wrap;
+}
+
+.hero-image {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+  animation: floatImage 5s ease-in-out infinite;
+}
+
+.hero-image img {
+  border-radius: 16px;
+  max-height: 480px;
+  object-fit: cover;
+}
+
+/* ==========================================================================
+   4. CTA Button
+   ========================================================================== */
+
+.cta-button {
+  display: inline-block;
+  background-color: #c8934f;
+  color: #201a15;
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: #d8a35a;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(200, 147, 79, 0.35);
+}
+
+/* ==========================================================================
+   5. Main Sections
+   ========================================================================== */
+
+section {
+  padding: 80px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Problem section */
+
+.problem {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.problem-content {
+  flex: 1;
+  min-width: 280px;
+}
+
+.problem-content h2 {
+  font-size: 34px;
+  margin-bottom: 16px;
+}
+
+.problem-images {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  gap: 16px;
+}
+
+.problem-images figure {
+  flex: 1;
+  text-align: center;
+}
+
+.problem-images img {
+  border-radius: 12px;
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.problem-images img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.03);
+}
+
+.problem-images figcaption {
+  font-size: 13px;
+  color: #6b6259;
+  margin-top: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Solution section */
+
+.solution {
+  background-color: #1c1710;
+  color: #fdfaf6;
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  border-radius: 24px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.solution-image {
+  flex: 1;
+  width: 260px;
+  height: 500px;
+}
+
+
+.solution-image img {
+  border-radius: 24px 0 0 24px;
+  height: 420px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.solution-content {
+  flex: 1;
+  min-width: 280px;
+  padding: 40px 40px 40px 0;
+}
+
+.solution-content h2 {
+  font-size: 34px;
+  margin-bottom: 16px;
+}
+
+.solution-content .section-text {
+  color: #cfc4b6;
+}
+
+.solution-features {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.solution-features li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  text-align: center;
+  max-width: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.solution-features .icon {
+  font-size: 20px;
+  color: #d8a35a;
+}
+
+/* Fragrance experience */
+
+.experience{
+  display: flex;
+}
+
+.experience-content {
+  max-width: 520px;
+  margin-bottom: 40px;
+}
+
+.experience-content h2 {
+  font-size: 34px;
+  margin-bottom: 16px;
+}
+
+.notes {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.notes figure {
+  flex: 1;
+  
+  text-align: center;
+}
+
+.notes img {
+  border-radius: 12px;
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.notes img:hover {
+  transform: scale(1.03);
+}
+
+.notes figcaption {
+  margin-top: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.notes figcaption strong {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.notes figcaption span {
+  font-size: 13px;
+  color: #6b6259;
+}
+
+/* Premium details */
+
+.details {
+  background-color: #f2ece2;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.details-image {
+  flex: 1;
+  min-width: 280px;
+}
+
+.details-image img {
+  border-radius: 16px;
+  height: 380px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.details-content {
+  flex: 1;
+  min-width: 280px;
+}
+
+.details-content h2 {
+  font-size: 34px;
+  margin-bottom: 16px;
+}
+
+.detail-cards {
+  display: flex;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.detail-cards figure {
+  flex: 1;
+  text-align: center;
+}
+
+.detail-cards img {
+  border-radius: 10px;
+  height: 90px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.detail-cards figcaption {
+  font-size: 12px;
+  margin-top: 8px;
+  color: #6b6259;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ==========================================================================
+   6. Cards / Components (Testimonials, Pricing, FAQ)
+   ========================================================================== */
+
+.testimonials h2 {
+  font-size: 34px;
+  margin-bottom: 40px;
+}
+
+.testimonial-cards {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  flex: 1;
+  min-width: 260px;
+  background-color: #fff;
+  border: 1px solid #eee2d3;
+  border-radius: 16px;
+  padding: 26px;
+  text-align: left;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.06);
+}
+
+.avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+.stars {
+  color: #d8a35a;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.testimonial-card p {
+  font-size: 15px;
+  color: #4b433c;
+  margin-bottom: 14px;
+}
+
+.reviewer {
+  font-size: 13px;
+  color: #a9895e;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Pricing */
+
+.pricing {
+  background-color: #f7e3d6;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.pricing-content {
+  flex: 1;
+  min-width: 260px;
+}
+
+.pricing-content h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.price .current {
+  color: #b5652b;
+  font-weight: bold;
+}
+
+.price .original {
+  color: #a89a89;
+  text-decoration: line-through;
+  font-size: 20px;
+  margin-left: 8px;
+}
+
+.pricing-trust {
+  display: flex;
+  justify-content: center;
+  gap: 33px;
+  margin-top: 24px;
+  font-size: 17px;
+  color: #6b5844;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+}
+
+
+
+.pricing-trust i{
+  color: #2b2420;
+  margin-left: 10px;
+  font-size: 23px;
+}
+
+.pricing-image {
+  flex: 1;
+  min-width: 220px;
+  display: flex;
+  justify-content: center;
+}
+
+.pricing-image img {
+  max-height: 320px;
+  border-radius: 12px;
+}
+
+.pricing-list {
+  list-style: none;
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #4b433c;
+}
+
+.pricing-list li::before {
+  content: "✓ ";
+  color: #b5652b;
+  font-weight: bold;
+}
+
+/* FAQ */
+
+.faq h2 {
+  font-size: 34px;
+  margin-bottom: 40px;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.faq-item {
+  background-color: #fff;
+  border: 1px solid #eee2d3;
+  border-radius: 12px;
+  padding: 18px 22px;
+}
+
+.faq-item summary {
+  cursor: pointer;
+  font-size: 15px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  font-size: 20px;
+  color: #a9895e;
+  margin-left: 12px;
+}
+
+.faq-item[open] summary::after {
+  content: "−";
+}
+
+.faq-item p {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #6b6259;
+}
+
+/* ==========================================================================
+   7. Closing CTA & Footer
+   ========================================================================== */
+
+.closing {
+  background-color: #1c1710;
+  color: #fdfaf6;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.closing-content h2 {
+  font-size: 34px;
+  margin-bottom: 14px;
+  max-width: 480px;
+}
+
+.closing-content .section-text {
+  color: #cfc4b6;
+  margin-bottom: 24px;
+}
+
+.closing-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #e6ddd2;
+}
+
+.footer {
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 13px;
+  color: #a89a89;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ==========================================================================
+   8. Animations
+   ========================================================================== */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatImage {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+section {
+  animation: fadeIn 0.6s ease both;
+}
+
+/* ==========================================================================
+   9. Responsive
+   ========================================================================== */
+
+@media (max-width: 900px) {
+
+  .hero,
+  .solution,
+  .details,
+  .pricing,
+  .closing {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  
+.solution-image {
+  flex: 1;
+  width: 70%;
+  height: auto;
+}
+
+.solution-features{
+  gap: 15px;
+}
+
+  .solution-content {
+    padding: 25px;
+  
+  }
+
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  
+.solution-features{
+  gap: 5px;
+}
+  .nav {
+    display: none;
+  }
+  .solution-image {
+  flex: 1;
+  width: 70%;
+  height: auto;
+}
+
+  .header-cta {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  section {
+    padding: 60px 24px;
+  }
+
+  .hero {
+    padding: 50px 24px;
+  }
+
+  .hero-content h1 {
+    font-size: 34px;
+  }
+
+  .problem,
+  .notes,
+  .details,
+  .experience,
+  .testimonial-cards {
+    flex-direction: column;
+  }
+
+  .problem-images {
+    flex-direction: column;
+  }
+
+  .problem-images img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-inner {
+    padding: 0 20px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .hero-features {
+    gap: 16px;
+    justify-content: space-between;
+  }
+
+  .hero-features li {
+    max-width: 70px;
+    font-size: 11px;
+  }
+
+  .cta-button {
+    padding: 12px 22px;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-trust {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  section h2 {
+    font-size: 26px;
+  }
+
+  .pricing-list {
+    width: 100%;
+  }
+}
