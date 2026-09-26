@@ -102,7 +102,7 @@ h2 {
 
 .nav a:hover {
   color: #ffffff;
-  
+
 }
 
 .header-cta {
@@ -300,7 +300,7 @@ section {
 .solution {
   background-color: #1c1710;
   color: #fdfaf6;
- 
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -366,7 +366,7 @@ section {
 
 /* Fragrance experience */
 
-.experience{
+.experience {
   display: flex;
 }
 
@@ -388,7 +388,7 @@ section {
 
 .notes figure {
   flex: 1;
-  
+
   text-align: center;
 }
 
@@ -588,7 +588,7 @@ section {
 
 
 
-.pricing-trust i{
+.pricing-trust i {
   color: #2b2420;
   margin-left: 10px;
   font-size: 23px;
@@ -765,20 +765,20 @@ section {
     text-align: left;
   }
 
-  
-.solution-image {
-  flex: 1;
-  width: 70%;
-  height: auto;
-}
 
-.solution-features{
-  gap: 15px;
-}
+  .solution-image {
+    flex: 1;
+    width: 70%;
+    height: auto;
+  }
+
+  .solution-features {
+    gap: 15px;
+  }
 
   .solution-content {
     padding: 25px;
-  
+
   }
 
   .faq-grid {
@@ -786,19 +786,36 @@ section {
   }
 }
 
+
+
 @media (max-width: 768px) {
-  
-.solution-features{
-  gap: 5px;
-}
+
+  .nav.nav-open {
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    padding: 20px 24px;
+    gap: 16px;
+    height: 300px;
+  }
+
+  .solution-features {
+    gap: 5px;
+  }
+
   .nav {
     display: none;
   }
+
   .solution-image {
-  flex: 1;
-  width: 70%;
-  height: auto;
-}
+    flex: 1;
+    width: 70%;
+    height: auto;
+  }
 
   .header-cta {
     display: none;
@@ -815,6 +832,11 @@ section {
   .hero {
     padding: 50px 24px;
   }
+
+  .hero-content.p-top{
+    padding-top: 150px;
+  }
+
 
   .hero-content h1 {
     font-size: 34px;

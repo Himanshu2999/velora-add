@@ -23,17 +23,17 @@
           <a href="#faq">FAQ</a>
         </nav>
         <a href="#pricing" class="cta-button header-cta">Buy Velora</a>
-        <button class="nav-toggle" aria-label="Open menu">
-          <span></span>
-          <span></span>
-          <span></span>
+        <button id="navToggle" class="nav-toggle" aria-label="Open menu">
+          <span> </span>
+          <span> </span>
+          <span> </span>
         </button>
       </div>
     </header>
 
     <!-- Hero -->
     <section class="hero" id="home">
-      <div class="hero-content">
+      <div class="hero-content" id="h-cont">
         <p class="eyebrow">A Brighter Kind of You</p>
         <h1>Find Your Signature Scent.</h1>
         <p class="hero-text">
@@ -230,9 +230,9 @@
       <p class="section-text">
         Premium fragrance. Everyday elegance. A brighter kind of you.
       </p>
-      <br/>
+      <br />
       <a href="#" class="cta-button">Buy Velora →</a>
-      
+
     </div>
 
     <div class="pricing-image">
@@ -323,5 +323,11 @@
   </footer>
 
 </body>
+<script>
+  document.getElementById('navToggle').addEventListener('click', function () {
+    document.querySelector('.nav').classList.toggle('nav-open');
+    document.querySelector('.hero-content').classList.toggle('p-top');
+  });
+</script>
 
 </html>
